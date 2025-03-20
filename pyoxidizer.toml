@@ -1,0 +1,21 @@
+﻿# إعداد PyOxidizer لتجميع التطبيق إلى EXE
+[application]
+default_encoding = "utf-8"
+
+[packaging]
+python_distribution = "embedded"  # استخدام Python المدمج
+python_version = "3.13"  # تأكد من أنك تستخدم إصدار Python الصحيح
+
+[python]
+entry_point = "app.py"  # تأكد من أن اسم الملف الرئيسي صحيح
+
+[files]
+include = [
+    "assets/*.ico",
+    "assets/*.jpg",
+    "assets/*.png"
+]
+
+[output]
+output_type = "exe"
+output_name = "Jerusalem_AI"

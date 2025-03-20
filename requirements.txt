@@ -1,0 +1,9 @@
+streamlit
+google-generativeai
+Pillow
+pytesseract
+GoogleNews
+SpeechRecognition
+deep-translator
+firebase-admin
+streamlit-oauth
