@@ -9,7 +9,7 @@ from firebase_admin import credentials, auth
 from google_auth_oauthlib.flow import InstalledAppFlow
 from oauth2client.tools import run_flow
 from oauth2client.file import Storage
-from authlib.integrations.requests_client import OAuth2Session
+from requests_oauthlib import OAuth2Session  # بديل عن authlib
 import easyocr
 from gtts import gTTS
 import os
