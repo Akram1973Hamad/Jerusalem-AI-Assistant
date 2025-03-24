@@ -30,12 +30,12 @@ st.set_page_config(
 
 
 
-import os
 
-base_dir = os.path.dirname(os.path.abspath(__file__))  # احصل على مسار المجلد الحالي
-cred_path = os.path.join(base_dir, "jerusalemguide-f62df524-firebase-adminsdk-rx86y-8df46b8ec5.json")
 
-cred = credentials.Certificate(cred_path)
+# تحميل بيانات Firebase من Streamlit Secrets
+firebase_creds = st.secrets["firebase"]
+cred = credentials.Certificate(firebase_creds)
+firebase_admin.initialize_app(cred)
 
 # تهيئة النموذج الذكاء الصناعي (Google Gemini AI)
 genai.configure(api_key="AIzaSyBSJuDonuegkf9ONc86rzffFAywf9897n0")  # استبدل بمفتاح API الصحيح
