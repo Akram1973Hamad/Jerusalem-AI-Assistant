@@ -28,19 +28,9 @@ st.set_page_config(
     layout="wide",
 )
 
-try:
-    firebase_creds = json.loads(st.secrets["jerusalemguide-f62df524-firebase-adminsdk-rx86y-8df46b8ec5.json"])  # تأكد من أنها JSON
-    st.write("✅ Firebase Credentials Loaded Successfully!")
-
-    # تهيئة Firebase
-    if not firebase_admin._apps:
-        cred = credentials.Certificate(firebase_creds)
-        firebase_admin.initialize_app(cred)
-        st.write("✅ Firebase Initialized Successfully!")
-    else:
-        st.write("ℹ️ Firebase Already Initialized.")
-except Exception as e:
-    st.error(f"❌ Firebase Initialization Error: {e}")
+# تحميل بيانات المفتاح من الملف
+cred = credentials.Certificate("jerusalemguide-f62df524-firebase-adminsdk-rx86y-79d3e1f578.json")
+firebase_admin.initialize_app(cred)
 
 
 
