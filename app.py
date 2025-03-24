@@ -366,7 +366,7 @@ with tab5:
 st.sidebar.title("تسجيل الدخول")
 
 # تسجيل الدخول عبر Google
-redirect_uri = "https://jerusalem-ai-assistant-m5pxic4rqhoshiwjjcfdkn.streamlit.app/"  # استبدل بالرابط العام لتطبيقك
+redirect_uri = "https://jerusalem-ai-assistant-gfmfc7x9ttvtaa9xycahbn.streamlit.app/"  # استبدل بالرابط العام لتطبيقك
 flow = OAuth2WebServerFlow(
     client_id='802468228123-csjve6jnv8r9bv5c6r7ebs7kooj1741f.apps.googleusercontent.com',  # استبدل بـ client_id الخاص بك
     client_secret='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',  # استبدل بـ client_secret الخاص بك
@@ -388,7 +388,7 @@ facebook_client = OAuth2Session(
     client_id="1831786527570419",  # استبدل بـ client_id الخاص بك
     client_secret="44169622fcde26e0910bcace16ad8f02",  # استبدل بـ client_secret الخاص بك
     scope="email",  # الصلاحيات المطلوبة
-    redirect_uri="https://jerusalem-ai-assistant-m5pxic4rqhoshiwjjcfdkn.streamlit.app/",  # استخدم نفس الرابط العام
+    redirect_uri="https://jerusalem-ai-assistant-gfmfc7x9ttvtaa9xycahbn.streamlit.app/",  # استخدم نفس الرابط العام
 )
 
 # إنشاء رابط تسجيل الدخول
