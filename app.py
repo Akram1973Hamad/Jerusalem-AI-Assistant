@@ -29,7 +29,7 @@ st.set_page_config(
 )
 
 try:
-    firebase_creds = json.loads(st.secrets["firebase"])  # تأكد من أنها JSON
+    firebase_creds = json.loads(st.secrets["jerusalemguide-f62df524-firebase-adminsdk-rx86y-8df46b8ec5.json"])  # تأكد من أنها JSON
     st.write("✅ Firebase Credentials Loaded Successfully!")
 
     # تهيئة Firebase
