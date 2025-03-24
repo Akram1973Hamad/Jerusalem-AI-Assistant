@@ -7,6 +7,9 @@ SpeechRecognition
 deep-translator
 firebase-admin
 streamlit-oauth
-google-auth-oauthlib>=1.0.0
+google-auth-oauthlib>=1.5.1
 oauth2client>=4.1.3
 google-auth>=2.0.0
+cryptography==44.0.2
+cffi>=1.12
+pycparser
