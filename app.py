@@ -28,14 +28,22 @@ st.set_page_config(
     layout="wide",
 )
 
+try:
+    firebase_creds = json.loads(st.secrets["firebase"])  # تأكد من أنها JSON
+    st.write("✅ Firebase Credentials Loaded Successfully!")
+
+    # تهيئة Firebase
+    if not firebase_admin._apps:
+        cred = credentials.Certificate(firebase_creds)
+        firebase_admin.initialize_app(cred)
+        st.write("✅ Firebase Initialized Successfully!")
+    else:
+        st.write("ℹ️ Firebase Already Initialized.")
+except Exception as e:
+    st.error(f"❌ Firebase Initialization Error: {e}")
 
 
 
-
-# تحميل بيانات Firebase من Streamlit Secrets
-firebase_creds = st.secrets["firebase"]
-cred = credentials.Certificate(firebase_creds)
-firebase_admin.initialize_app(cred)
 
 # تهيئة النموذج الذكاء الصناعي (Google Gemini AI)
 genai.configure(api_key="AIzaSyBSJuDonuegkf9ONc86rzffFAywf9897n0")  # استبدل بمفتاح API الصحيح
