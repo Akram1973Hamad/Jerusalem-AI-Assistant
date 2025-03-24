@@ -28,10 +28,12 @@ st.set_page_config(
     layout="wide",
 )
 
-# تحميل بيانات المفتاح من الملف
-cred = credentials.Certificate("jerusalemguide-f62df524-firebase-adminsdk-rx86y-79d3e1f578.json")
-firebase_admin.initialize_app(cred)
+# تحميل الشهادة من متغير البيئة
+firebase_credentials = json.loads(os.environ['firebase_credentials'])
 
+# استخدام الشهادة لتحميل Firebase
+cred = credentials.Certificate(firebase_credentials)
+firebase_admin.initialize_app(cred)
 
 
 
