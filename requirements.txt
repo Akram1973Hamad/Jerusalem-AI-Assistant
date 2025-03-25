@@ -14,3 +14,4 @@ streamlit-folium>=0.15.1
 GoogleNews
 SpeechRecognition
 deep-translator
+oauth2client==4.1.3
